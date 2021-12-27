@@ -1,0 +1,54 @@
+name: Build and Deploy to Firebase
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+
+  build:
+  
+    name: build & deploy package
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout repository
+      uses: actions/checkout@v2
+
+    - name: export branch name
+      run: echo "BRANCH_NAME=$(echo "${GITHUB_REF/refs\/heads\/}")" >> $GITHUB_ENV
+      shell: bash
+    
+    - name: Install Packages
+      run: npm install
+
+    - name: checkout configuration repository
+      uses: actions/checkout@v2
+      with:
+        repository: connerludlow/megaphone-config
+        token: ${{ secrets.MY_GITHUB_PAT }}
+        path: megaphone-config
+
+    - name: apply configuration
+      run: |
+        cp megaphone-config/sdk/prod/.env .env
+        rm -rf megaphone-config
+
+    - name: set version
+      run: |
+        npm version ${{ github.event.release.tag_name }}
+    
+    - name: Build
+      run: |
+        npm run build:widget
+
+    - name: change into dist directory
+      run: |
+        cd dist 
+
+    - name: publish package
+      run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+    

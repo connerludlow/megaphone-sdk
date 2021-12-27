@@ -3,7 +3,8 @@
     "@babel/preset-react"
   ],
   "plugins": [
-    "babel-plugin-react-scoped-css"
+    "babel-plugin-react-scoped-css",
+    "inline-dotenv"
   ],
   "ignore": [
     "src/index.js",
