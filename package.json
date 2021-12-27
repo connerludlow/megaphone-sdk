@@ -2,6 +2,23 @@
   "name": "megaphone-sdk",
   "version": "0.8.3",
   "private": false,
+  "homepage": "https://github.com/connerludlow/megaphone-sdk",
+  "description": "A react component to easily display banners and announcements within your app",
+  "keywords": [
+    "banner",
+    "announcements",
+    "widget"
+  ],
+  "bugs": {
+    "url": "https://github.com/connerludlow/megaphone-sdk/issues"
+  },
+  "repository": {
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/connerludlow/megaphone-sdk"
+    }
+  },
+  "license": "MIT",
   "dependencies": {
     "@heroicons/react": "^1.0.5",
     "axios": "^0.24.0",
