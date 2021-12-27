@@ -36,9 +36,9 @@ jobs:
 
     - name: set version
       run: |
-        npm version ${{ github.event.release.tag_name }}
+        npm version ${{ github.event.release.tag_name }} --no-git-tag-version
     
-    - name: Build
+    - name: babel build
       run: |
         npm run build:widget
 
