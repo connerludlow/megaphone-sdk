@@ -47,6 +47,10 @@ jobs:
         cd dist 
 
     - name: publish package
-      run: npm publish --access public --token ${{secrets.NPM_TOKEN}}
+      run: |
+        npm config set
+        npm publish --ignore-scripts
+      env:
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     
