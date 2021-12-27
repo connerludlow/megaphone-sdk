@@ -1,0 +1,12 @@
+{
+  "presets": [
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "babel-plugin-react-scoped-css"
+  ],
+  "ignore": [
+    "src/index.js",
+    "src/index.css"
+  ]
+}
