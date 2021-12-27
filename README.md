@@ -2,7 +2,7 @@
 
 The Megaphone SDK includes a component to easily display banners and announcements within your app.
 
-In order to use the Megaphone SDK, register for an account at <a href="http://megaphonesdk.com/" target="_blank">megaphonesdk.com</a>
+In order to use the Megaphone SDK, register for an account at [megaphonesdk.com](https://megaphonesdk.com)
 
 ## Installation
 
@@ -42,4 +42,4 @@ export default App;
 
 ## Creating Announcements
 
-Once you have installed the widget, you can create and manage your announcements and banners from the <a href="http://megaphonesdk.com/" target="_blank">Megaphone App</a>. Any banner you create will automatically be displayed by the widget. 
+Once you have installed the widget, you can create and manage your announcements and banners from the [Megaphone App](https://app.megaphonesdk.com). Any banner you create will automatically be displayed by the widget. 
