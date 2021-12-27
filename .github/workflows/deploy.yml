@@ -48,7 +48,6 @@ jobs:
 
     - name: publish package
       run: |
-        npm config set
         npm publish --ignore-scripts
       env:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
