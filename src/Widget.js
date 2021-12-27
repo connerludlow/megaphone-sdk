@@ -13,9 +13,9 @@ const Widget = ({ accountId }) => {
   useEffect(() => {
     const getAnnouncement = async () => {
       console.log('getting announcement');
-      //const baseURL = process.env.REACT_APP_FUNCTIONS_BASE_URL
+      const baseURL = process.env.REACT_APP_FUNCTIONS_BASE_URL
       const { data } = await axios.get(
-        `https://us-central1-megaphone-widget.cloudfunctions.net/announcements-getAnnouncement`,
+        `${baseURL}/announcements-getAnnouncement`,
         {
           params: {
             accountId: accountId
