@@ -1,9 +1,6 @@
 name: Deploy to NPM
 
 on:
-  push:
-    branches:
-      - main
   release:
     types:
       - published
@@ -49,9 +46,9 @@ jobs:
       run: |
         cd dist 
 
-    - name: publish package
-      run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+    # - name: publish package
+    #   run: npm publish --access public
+    #     env:
+    #       NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
     
