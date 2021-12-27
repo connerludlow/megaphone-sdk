@@ -40,7 +40,7 @@ jobs:
     
     - name: babel build
       run: |
-        npm run build:widget
+        npm run build:package
 
     - name: change into dist directory
       run: |
